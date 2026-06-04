@@ -67,7 +67,7 @@ function Nav({ scrolled, showFloat }) {
         transition: 'all 0.4s',
       }}>
         <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ textDecoration: 'none' }}>
-  <img src="/logo.png" alt="Tonel" style={{ height: 100, objectFit: 'contain' }} />
+  <img src="/logo.png" alt="Tonel" style={{ height: 90, objectFit: 'contain' }} />
 </a>
         <ul style={{ display: 'flex', gap: '0.5rem', listStyle: 'none', alignItems: 'center' }}>
           {[['services','Services'],['story','Notre histoire'],['contact','Contact']].map(([id,label]) => (
@@ -422,7 +422,7 @@ function Footer() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', paddingBottom: '3rem', borderBottom: '1px solid rgba(255,255,255,0.07)', marginBottom: '2rem', position: 'relative', zIndex: 1 }}>
         <div>
           <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ display: 'block', marginBottom: '0.8rem' }}>
-  <img src="/logo.png" alt="Tonel" style={{ height: 120, objectFit: 'contain' }} />
+  <img src="/logo.png" alt="Tonel" style={{ height: 120, objectFit: 'contain', marginBottom: '0.8rem' }} />
 </a>
           <div style={{ fontSize: '0.82rem', color: 'rgba(255,248,242,0.35)', fontStyle: 'italic', fontFamily: "'Playfair Display',serif" }}>L'excellence digitale, à votre portée.</div>
         </div>
