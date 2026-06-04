@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 /* ── SERVICES DATA ── */
 const SERVICES = [
@@ -325,7 +326,15 @@ function Devis() {
               <p style={{ fontSize: '0.9rem', color: 'rgba(255,248,242,0.6)', fontWeight: 300 }}>Merci pour votre confiance. Nous vous contacterons sous 24h pour échanger sur votre projet.</p>
             </div>
           ) : (
-            <form onSubmit={e => { e.preventDefault(); setSent(true); }} style={{ display: 'flex', flexDirection: 'column', gap: '1.4rem', position: 'relative', zIndex: 1 }}>
+            <form onSubmit={e => {
+  e.preventDefault();
+  emailjs.send(
+    'service_knvdezo',
+    'template_hpzaoab',
+    { prenom: form.prenom, nom: form.nom, email: form.email, tel: form.tel, type: form.type, budget: form.budget, desc: form.desc },
+    'tNcR6132eS-Xg0FoS'
+  ).then(() => setSent(true)).catch(() => alert('Erreur lors de l\'envoi, veuillez réessayer.'));
+}} style={{ display: 'flex', flexDirection: 'column', gap: '1.4rem', position: 'relative', zIndex: 1 }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem' }}>
                 <FormField label="Prénom *" input={<input style={inputStyle} placeholder="Jean" value={form.prenom} onChange={set('prenom')} required onFocus={e => e.target.style.borderColor='#FF6B1A'} onBlur={e => e.target.style.borderColor='rgba(255,107,26,0.2)'} />} />
                 <FormField label="Nom *" input={<input style={inputStyle} placeholder="Dupont" value={form.nom} onChange={set('nom')} required onFocus={e => e.target.style.borderColor='#FF6B1A'} onBlur={e => e.target.style.borderColor='rgba(255,107,26,0.2)'} />} />
