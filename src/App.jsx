@@ -67,7 +67,7 @@ function Nav({ scrolled, showFloat }) {
         transition: 'all 0.4s',
       }}>
         <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ textDecoration: 'none' }}>
-  <img src="/logo.png" alt="Tonel" style={{ height: 60, objectFit: 'contain' }} />
+  <img src="/logo.png" alt="Tonel" style={{ height: 75, objectFit: 'contain' }} />
 </a>
         <ul style={{ display: 'flex', gap: '0.5rem', listStyle: 'none', alignItems: 'center' }}>
           {[['services','Services'],['story','Notre histoire'],['contact','Contact']].map(([id,label]) => (
