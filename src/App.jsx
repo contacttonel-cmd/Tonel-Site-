@@ -70,7 +70,7 @@ function Nav({ scrolled, showFloat }) {
     <>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200, padding: '0 5vw', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 60 : 72, background: scrolled || menuOpen ? 'rgba(18,13,31,0.97)' : 'rgba(18,13,31,0.88)', backdropFilter: 'blur(24px)', borderBottom: '1px solid rgba(255,107,26,0.2)', transition: 'all 0.4s' }}>
         <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ textDecoration: 'none' }}>
-          <img src="/logo.png" alt="Tonel" style={{ height: isMobile ? 48 : 64, objectFit: 'contain' }} />
+          <img src="/logo.png" alt="Tonel" style={{ height: isMobile ? 80 : 110, objectFit: 'contain' }} />
         </a>
         {isMobile ? (
           <button onClick={() => setMenuOpen(o => !o)} style={{ background: menuOpen ? 'rgba(255,107,26,0.2)' : 'transparent', border: '1px solid rgba(255,107,26,0.3)', borderRadius: 8, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5, cursor: 'pointer', padding: 0 }}>
@@ -123,7 +123,7 @@ function Hero() {
   const isMobile = useIsMobile();
   const scroll = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   return (
-    <section id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: isMobile ? '100px 6vw 60px' : '0 5vw' }}>
+    <section id="hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', padding: isMobile ? '100px 6vw 60px' : '80px 5vw' }}>
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,#120D1F 0%,#1C1028 20%,#2D1B10 55%,#4A1E00 80%,#FF4500 100%)' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 90% 60% at 50% 100%,rgba(255,107,26,0.6) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 50% 85%,rgba(255,179,71,0.35) 0%,transparent 50%)' }} />
       <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '200%', height: '80%', background: 'repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,107,26,0.04) 0deg,transparent 2deg,transparent 10deg,rgba(255,179,71,0.04) 12deg,transparent 14deg)', animation: 'raysRotate 30s linear infinite' }} />
@@ -162,8 +162,8 @@ function Hero() {
         )}
       </div>
 
-      {!isMobile && (
-        <div style={{ position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.6rem', color: 'rgba(255,248,242,0.3)', fontSize: '0.68rem', letterSpacing: '0.25em', textTransform: 'uppercase', animation: 'fadeIn 1s ease 1.5s both' }}>
+     {!isMobile && (
+  <div style={{ position: 'absolute', right: '5vw', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', gap: '3rem', animation: 'fadeIn 1s ease 1.2s both' }}>
           <div style={{ width: 22, height: 36, border: '1.5px solid rgba(255,179,71,0.3)', borderRadius: 100, display: 'flex', justifyContent: 'center', paddingTop: 6 }}>
             <div style={{ width: 3, height: 8, background: '#FFB347', borderRadius: 3, animation: 'scrollDown 1.8s ease-in-out infinite' }} />
           </div>
@@ -377,7 +377,7 @@ function Footer() {
       <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-start', gap: isMobile ? '2rem' : 0, paddingBottom: '2.5rem', borderBottom: '1px solid rgba(255,255,255,0.07)', marginBottom: '1.5rem', position: 'relative', zIndex: 1 }}>
         <div>
           <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ display: 'block', marginBottom: '0.8rem' }}>
-            <img src="/logo.png" alt="Tonel" style={{ height: 52, objectFit: 'contain' }} />
+            <img src="/logo.png" alt="Tonel" style={{ height: 110, objectFit: 'contain' }} />
           </a>
           <div style={{ fontSize: '0.82rem', color: 'rgba(255,248,242,0.35)', fontStyle: 'italic', fontFamily: "'Playfair Display',serif" }}>L'excellence digitale, à votre portée.</div>
         </div>
