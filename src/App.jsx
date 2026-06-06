@@ -129,7 +129,7 @@ function Hero() {
       <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '200%', height: '80%', background: 'repeating-conic-gradient(from 0deg at 50% 100%,rgba(255,107,26,0.04) 0deg,transparent 2deg,transparent 10deg,rgba(255,179,71,0.04) 12deg,transparent 14deg)', animation: 'raysRotate 30s linear infinite' }} />
       {!isMobile && <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', filter: 'blur(60px)', background: 'rgba(255,107,26,0.25)', bottom: '10%', left: '5%', animation: 'floatOrb 8s ease-in-out infinite' }} />}
       {!isMobile && <div style={{ position: 'absolute', width: 300, height: 300, borderRadius: '50%', filter: 'blur(60px)', background: 'rgba(255,179,71,0.2)', bottom: '20%', right: '10%', animation: 'floatOrb 11s ease-in-out infinite reverse' }} />}
-      <div style={{ display: 'none', position: 'absolute', bottom: '30%', left: 0, right: 0, height: 1, background: 'linear-gradient(90deg,transparent,rgba(255,179,71,0.4),rgba(255,255,255,0.6),rgba(255,179,71,0.4),transparent)', animation: 'horizonPulse 4s ease-in-out infinite' }} />
+      <div style={{ position: 'absolute', bottom: '30%', left: 0, right: 0, height: 1, background: 'linear-gradient(90deg,transparent,rgba(255,179,71,0.4),rgba(255,255,255,0.6),rgba(255,179,71,0.4),transparent)', animation: 'horizonPulse 4s ease-in-out infinite' }} />
       <Particles />
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: isMobile ? '100%' : 820, width: '100%' }}>
