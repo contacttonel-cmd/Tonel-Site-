@@ -70,7 +70,7 @@ function Nav({ scrolled, showFloat }) {
     <>
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200, padding: '0 5vw', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 60 : 72, background: scrolled || menuOpen ? 'rgba(18,13,31,0.97)' : 'rgba(18,13,31,0.88)', backdropFilter: 'blur(24px)', borderBottom: '1px solid rgba(255,107,26,0.2)', transition: 'all 0.4s' }}>
         <a href="#hero" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ textDecoration: 'none' }}>
-          <img src="/logo.png" alt="Tonel" style={{ height: isMobile ? 80 : 110, objectFit: 'contain' }} />
+          <img src="/logo.png" alt="Tonel" style={{ height: isMobile ? 60 : 90, objectFit: 'contain' }} />
         </a>
         {isMobile ? (
           <button onClick={() => setMenuOpen(o => !o)} style={{ background: menuOpen ? 'rgba(255,107,26,0.2)' : 'transparent', border: '1px solid rgba(255,107,26,0.3)', borderRadius: 8, width: 40, height: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5, cursor: 'pointer', padding: 0 }}>
